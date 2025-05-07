@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "axios": "^1.9.0",
+    "eslint": "^9.26.0",
+    "fs-extra": "^11.3.0",
+    "lodash": "^4.17.21",
+    "prettier": "^3.5.3"
+  }
+}

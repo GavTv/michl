@@ -1,0 +1,167 @@
+.heroEffects {
+  height: 100dvh;
+  position: relative;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  max-width: 440px;
+  margin: 0 auto;
+  font-family: "Great Vibes", cursive;
+}
+
+.heroEffects .bg {
+  height: 100dvh;
+  position: fixed;
+  width: 100%;
+  max-width: 440px;
+  background-image: url(/third/Фото/IMG_6745.JPG);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transform: scale(1);
+}
+
+.heroEffects .shade {
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 3;
+  height: 100dvh;
+  position: fixed;
+  width: 100%;
+  max-width: 440px;
+}
+
+.heroEffects .title {
+  width: 100%;
+  max-width: 440px;
+}
+
+.heroEffects .title .text {
+  z-index: 1;
+  width: 100%;
+  text-align: center;
+  color: white;
+  padding: 3em 20px;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.heroEffects .arrow {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 15px;
+  width: 40px;
+  height: 40px;
+  opacity: 1;
+}
+
+.centerV {
+  display: table;
+  height: 100%;
+}
+
+.centerV > div {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+h1 {
+  font-size: 32px;
+  line-height: 1.2;
+  color: #fff;
+  margin-bottom: 0.3em;
+}
+
+p {
+  width: 80%;
+  margin: 0 auto;
+  line-height: 1.5em;
+  padding: 10px 10px 0;
+  border-top: solid 1px rgba(255, 255, 255, 0.2);
+  letter-spacing: 0.015em;
+  display: block;
+  color: #eee;
+  font-size: 14px;
+}
+
+.content {
+  background-image: url("/third/Фото/bg-content.jpg"); /* переименуй файл без пробелов */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  max-width: 440px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  opacity: 0.5; /* <<< делает фон полупрозрачным */
+  transition: opacity 0.5s ease;
+}
+
+.content:hover {
+  opacity: 0.7; /* немного усилится при наведении (по желанию) */
+}
+
+.content p {
+  color: white;
+  font-size: 18px;
+  margin: 0;
+  line-height: 1.5;
+  /* убираем фон-квадратик */
+  background: none;
+  padding: 0;
+  border-radius: 0;
+}
+
+
+/* Анимация стрелки */
+.bouncy {
+  animation: Weeeeeeeeeee 3s infinite cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes Weeeeeeeeeee {
+  0%,
+  100% {
+    transform: translate(0, 0px);
+  }
+  11% {
+    transform: translate(0, -25px) scaleX(0.8);
+  }
+  20% {
+    transform: translate(0, 0px) scaleY(0.8);
+  }
+  28% {
+    transform: translate(0, -10px);
+  }
+  36% {
+    transform: translate(0, 0px);
+  }
+}
+
+/* Сброс и контейнер */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.content {
+  color: rgb(177, 89, 89);
+}
+
+html,
+body {
+  height: 100%;
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+body {
+  font-family: "Julius Sans One", sans-serif;
+  font-size: 12px;
+  overflow-x: hidden;
+}
