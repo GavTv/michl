@@ -139,6 +139,15 @@ body {
   justify-content: center;
 }
 
+.date1 {
+  font-size: 2em; /* увеличь значение по желанию */
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  margin-top: 0.5em;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* для контраста на фоне */
+}
+
 .button {
   min-width: 70px;
   min-height: 5px;
@@ -182,6 +191,7 @@ body {
   opacity: 0;
   transition: all 0.3s ease-in-out 0s;
 }
+
 
 .button:hover,
 .button:focus {
