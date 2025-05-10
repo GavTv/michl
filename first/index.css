@@ -23,7 +23,7 @@ body {
   position: relative;
 }
 /* === Блокировка на десктопах === */
-@media (min-width: 431px), (hover: hover) {
+@media (min-width: 440px), (hover: hover) {
   body::before {
     content: "Открывай только на телефоне 📴";
     position: fixed;
@@ -79,7 +79,7 @@ body {
   position: relative;
   z-index: 5;
   width: 100%;
-  max-width: 430px;
+  max-width: 435px;
   text-align: center;
   padding: 20px;
   top: 0;
