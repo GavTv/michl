@@ -151,73 +151,68 @@ body {
 }
 
 .button {
+  text-decoration: none;
   min-width: 70px;
-  min-height: 5px;
+  min-height: 30px;
   display: inline-flex;
-  font-family: "Nunito", sans-serif;
-  font-size: 7px;
   align-items: center;
   justify-content: center;
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: 1.3px;
+  font-family: "Nunito", sans-serif;
+  font-size: 10px;
   font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
   color: #313133;
-  background: #4fd1c5;
-  background: linear-gradient(
-    90deg,
-    rgb(207, 207, 20) 0%,
-    rgb(207, 207, 20) 100%
-  );
+  background: linear-gradient(90deg, rgb(207, 207, 20) 0%, rgb(207, 207, 20) 100%);
   border: none;
   border-radius: 700px;
-  box-shadow: 12px 12px 24px  rgb(207, 207, 20);
-  transition: all 0.3s ease-in-out 0s;
+  padding: 6px 14px;
   cursor: pointer;
   outline: none;
   position: relative;
-  padding: 6px;
+  box-shadow: 12px 12px 24px rgb(207, 207, 20);
+  transition: transform 0.3s ease-in-out;
 }
 
 .button::before {
   content: "";
-  border-radius: 500px;
-  min-width: calc(70px + 20px);
-  min-height: calc(50px + 20px);
-  border: 6px solid #7eff22;
-  box-shadow: 0 0 60px rgba(93, 200, 21, 0.64);
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  min-width: calc(70px + 20px);
+  min-height: calc(30px + 20px);
+  border-radius: 500px;
+  border: 6px solid #7eff22;
+  box-shadow: 0 0 60px rgba(93, 200, 21, 0.64);
   opacity: 0;
-  transition: all 0.3s ease-in-out 0s;
+  transition: all 0.6s ease-in-out;
 }
 
+.button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  border: 6px solid #a0ea18;
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 0.6;
+  animation: ring 2s ease-out infinite;
+  animation-delay: 0.6s;
+  z-index: -1;
+}
 
 .button:hover,
 .button:focus {
-  color: #313133;
-  transform: translateY(-6px);
+  transform: translateY(-4px);
 }
 
 .button:hover::before,
 .button:focus::before {
   opacity: 1;
-}
-
-.button::after {
-  content: "";
-  width: 16px;
-  height: 30px;
-  border-radius: 100%;
-  border: 6px solid #a0ea18;
-  position: absolute;
-  z-index: -1;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  animation: ring 1.5s infinite;
 }
 
 .button:hover::after,
@@ -228,16 +223,15 @@ body {
 
 @keyframes ring {
   0% {
-    width: 16px;
-    height: 16px;
-    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.6;
   }
   100% {
-    width: 80px; /* меньше финальный размер */
-    height: 80px;
+    transform: translate(-50%, -50%) scale(4);
     opacity: 0;
   }
 }
+
 
 hr.sep {
   border: 0;
