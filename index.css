@@ -266,7 +266,7 @@ hr.sep {
   height: 100%;
   background-image:
     linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.1) 100%),
-    url("/first/фотки/ай бл.jpg");
+    url("/фотки/ай бл.jpg");
   background-size: cover;
   background-position: center;
   z-index: 0;
